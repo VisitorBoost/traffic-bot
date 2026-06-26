@@ -1,0 +1,87 @@
+# ============================================================
+# Traffic Bot Configuration
+# ============================================================
+# Full configuration file for the Traffic Bot.
+# Customize all settings below to match your requirements.
+# ============================================================
+
+# --- Target Website ---
+target:
+  url: "https://example.com"        # Primary target URL
+  pages:                             # Additional pages to visit within sessions
+    - "/about"
+    - "/services"
+    - "/blog"
+    - "/contact"
+    - "/pricing"
+
+# --- Session Settings ---
+sessions:
+  total: 100                         # Total number of sessions to generate
+  concurrent: 10                     # Maximum concurrent browser sessions
+  delay_min: 10                      # Minimum delay between page actions (seconds)
+  delay_max: 60                      # Maximum delay between page actions (seconds)
+  pages_per_session_min: 1           # Minimum pages visited per session
+  pages_per_session_max: 6           # Maximum pages visited per session
+
+# --- Browser Settings ---
+browser:
+  headless: true                     # Run in headless mode (no visible window)
+  timeout: 30000                     # Page load timeout in milliseconds
+
+# --- Human Behavior Simulation ---
+behavior:
+  scroll: true                       # Enable scroll simulation
+  scroll_speed: "random"             # Options: slow, medium, fast, random
+  click_links: true                  # Click internal links during sessions
+  mouse_movement: true               # Simulate mouse cursor movements
+  random_pauses: true                # Add random pauses between actions
+
+# --- Referrer Configuration ---
+referrers:
+  organic_search_percent: 40         # % of sessions with search engine referrer
+  social_percent: 25                 # % of sessions with social media referrer
+  referral_percent: 20               # % of sessions with referral site referrer
+  direct_percent: 15                 # % of sessions with no referrer (direct)
+  keywords:                          # Custom keywords for search referrers
+    - "traffic bot"
+    - "website traffic generator"
+    - "web traffic tool"
+    - "increase website traffic"
+    - "automated traffic"
+    - "traffic generation"
+    - "SEO traffic bot"
+    - "web automation tool"
+
+# --- Device Distribution ---
+devices:
+  desktop_percent: 60                # % of sessions from desktop browsers
+  mobile_percent: 30                 # % of sessions from mobile browsers
+  tablet_percent: 10                 # % of sessions from tablet browsers
+
+# --- Geographic Targeting ---
+geo:
+  countries:
+    - "US"
+    - "UK"
+    - "CA"
+    - "AU"
+    - "DE"
+
+# --- Proxy Configuration ---
+proxy:
+  enabled: false                     # Set to true to enable proxy rotation
+  file: "proxies.txt"               # Path to proxy list file
+  rotation: "per_session"            # Options: per_session, per_request, round_robin, random
+  type: "residential"                # Options: residential, datacenter, mobile
+  # list:                            # Alternatively, define proxies inline:
+  #   - "http://user:pass@ip:port"
+  #   - "socks5://user:pass@ip:port"
+
+# --- Output & Logging ---
+output:
+  logging: true                      # Enable logging
+  log_file: "traffic_bot.log"        # Log file path
+  log_level: "INFO"                  # Options: DEBUG, INFO, WARNING, ERROR
+  report_file: "report.json"         # Session report output file
+  dashboard: true                    # Enable live terminal dashboard

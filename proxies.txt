@@ -1,0 +1,10 @@
+# Proxy List for Traffic Bot
+# Format: protocol://username:password@host:port
+# Lines starting with # are comments
+#
+# Examples:
+# http://user:pass@192.168.1.1:8080
+# socks5://user:pass@10.0.0.1:1080
+# http://proxy.provider.com:3128
+#
+# Add your proxies below (one per line):
